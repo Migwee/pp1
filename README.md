@@ -1,4 +1,3 @@
-pp1
-===
+# Programming project 1
 
-yolo reem swagger
+This is a programming project to demonstrate sortying algorithms.
