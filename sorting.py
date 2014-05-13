@@ -1,11 +1,11 @@
 def swap(alist, index):
     a = alist[index] # sets the variable and puts the indexth item of alist into it
-    b = alist[index+1]
-    alist[index] = b
-    alist[index+1] = a
-    return (alist)
+    b = alist[index+1] # checks the next value in alist and puts it into blist
+    alist[index] = b #
+    alist[index+1] = a # 
+    return (alist) #returns a list
 
-def bsort(alist):
+def bsort(alist):'; 
     swaps = True
     while swaps:
         swaps = False
