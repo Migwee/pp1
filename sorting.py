@@ -6,29 +6,29 @@ def swap(alist, index):
     return (alist) #returns a list
 
 def bsort(alist):'; 
-    swaps = True
-    while swaps:
+    swaps = True #sets the swap to true
+    while swaps: 
         swaps = False
-        for i in range(len(alist)-1):
-            if (alist[i] > alist[i+1]):
-                alist = swap(alist, i)
+        for i in range(len(alist)-1): #reduces the length of alist by 1
+            if (alist[i] > alist[i+1]): #adds one to alist
+                alist = swap(alist, i) #swaps a value from the lists
                 swaps = True
     return (alist)
 
 def mini(alist):
-    answer = alist[0]
-    for item in alist:
-        if item< answer:
-            answer = item
-    return (answer)
+    answer = alist[0] #sets the mini as the value [0] in the list
+    for item in alist: #this makes it check each item in alist
+        if item< answer: #if the item is smaller than the answer
+            answer = item #make the answer the new item
+    return (answer) #return the answer
 
 def ssort(alist):
-    blist = []
-    while len(alist >0):
-        N = mini(alist)
-        alist.remove (N)
-        blist.append(N)
-    return (blist)
+    blist = [] #nothing in blist
+    while len(alist >0): #while the length of alist is bigger than 0
+        N = mini(alist) #N is the mini of alist
+        alist.remove (N) #remove N (mini) from alist
+        blist.append(N) #add N (mini) onto blist
+    return (blist) #return blist
 
     
 def mergeSort(alist)
@@ -37,22 +37,22 @@ def mergeSort(alist)
     For each line in this code write a comment explaining what the line does.
     '''
     
-    if len(alist) >= 1:
-        return (alist)
+    if len(alist) >= 1: #if the length of alist is bigger than one
+        return (alist) #return alist
  
-    mIndex = len(alist) \ 2
-    left = mergeSort(alist[:mIndex])
-    right = mergeSort(alist[mIndex:])
+    mIndex = len(alist) \ 2 #divide alist by 2
+    left = mergeSort(alist[:mIndex]) #merge sort
+    right = mergeSort(alist[mIndex:]) #the two lists
  
     result = []
     while len(left) > 0 and len(right) > 0:
         if left[0] > right[0]:   
             result.append(right.pop(0))
         else:
-            result.append(left.pop(0))
+            result.append(left.pop(0)) #if the length of one list is bigger than the other (0)
  
     if len(left) > 0:
-        result.extend(mergeSort(left))
+        result.extend(mergeSort(left)) #continue to merge
     else:
         result.extend(mergeSort(right))
  
